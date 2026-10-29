@@ -1,0 +1,17 @@
+# Premium House Imóveis
+
+> Imobiliária de alto padrão com imóveis para compra, locação e temporada, além de empreendimentos selecionados em São Paulo, Alphaville, litoral e serra.
+
+## Páginas principais
+
+- [Início](https://premium-house-imoveis-2026.microsistec.chatgpt.site/): apresentação e imóveis em destaque.
+- [Buscar imóveis](https://premium-house-imoveis-2026.microsistec.chatgpt.site/imoveis): catálogo de imóveis com filtros.
+- [Empreendimentos](https://premium-house-imoveis-2026.microsistec.chatgpt.site/empreendimentos): empreendimentos e lançamentos.
+- [Nossa Equipe](https://premium-house-imoveis-2026.microsistec.chatgpt.site/corretores): corretores e formas de contato.
+- [Contato](https://premium-house-imoveis-2026.microsistec.chatgpt.site/contato): canais de atendimento.
+- [Sobre a Premium House](https://premium-house-imoveis-2026.microsistec.chatgpt.site/sobre): história e informações institucionais.
+
+## Observações
+
+- As páginas de imóveis e empreendimentos apresentam informações demonstrativas do template; disponibilidade, valores e condições devem ser confirmados com a imobiliária.
+- Formulários apresentados no template são demonstrativos e não enviam nem armazenam dados.

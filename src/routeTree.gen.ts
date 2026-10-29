@@ -10,33 +10,319 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnunciarRouteImport } from './routes/anunciar'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CorretoresRouteImport } from './routes/corretores'
+import { Route as DepoimentoEnviadoRouteImport } from './routes/depoimento-enviado'
+import { Route as EmpreendimentosRouteImport } from './routes/empreendimentos'
+import { Route as EncomendeSeuImovelRouteImport } from './routes/encomende-seu-imovel'
+import { Route as EnviarDepoimentoRouteImport } from './routes/enviar-depoimento'
+import { Route as FavoritosRouteImport } from './routes/favoritos'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as TrabalheConoscoRouteImport } from './routes/trabalhe-conosco'
+import { Route as VitrineRouteImport } from './routes/vitrine'
+import { Route as VitrineDothtmlRouteImport } from './routes/vitrine[.]html'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BuscaSlugRouteImport } from './routes/busca.$slug'
+import { Route as DemonstracaoIndexRouteImport } from './routes/demonstracao.index'
+import { Route as DemonstracaoTipoRouteImport } from './routes/demonstracao.$tipo'
+import { Route as EmpreendimentosIndexRouteImport } from './routes/empreendimentos.index'
+import { Route as EmpreendimentosSlugRouteImport } from './routes/empreendimentos.$slug'
+import { Route as ImoveisIndexRouteImport } from './routes/imoveis.index'
+import { Route as ImoveisIdRouteImport } from './routes/imoveis.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnunciarRoute = AnunciarRouteImport.update({
+  id: '/anunciar',
+  path: '/anunciar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorretoresRoute = CorretoresRouteImport.update({
+  id: '/corretores',
+  path: '/corretores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepoimentoEnviadoRoute = DepoimentoEnviadoRouteImport.update({
+  id: '/depoimento-enviado',
+  path: '/depoimento-enviado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpreendimentosRoute = EmpreendimentosRouteImport.update({
+  id: '/empreendimentos',
+  path: '/empreendimentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EncomendeSeuImovelRoute = EncomendeSeuImovelRouteImport.update({
+  id: '/encomende-seu-imovel',
+  path: '/encomende-seu-imovel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnviarDepoimentoRoute = EnviarDepoimentoRouteImport.update({
+  id: '/enviar-depoimento',
+  path: '/enviar-depoimento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavoritosRoute = FavoritosRouteImport.update({
+  id: '/favoritos',
+  path: '/favoritos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrabalheConoscoRoute = TrabalheConoscoRouteImport.update({
+  id: '/trabalhe-conosco',
+  path: '/trabalhe-conosco',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VitrineRoute = VitrineRouteImport.update({
+  id: '/vitrine',
+  path: '/vitrine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VitrineDothtmlRoute = VitrineDothtmlRouteImport.update({
+  id: '/vitrine.html',
+  path: '/vitrine.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuscaSlugRoute = BuscaSlugRouteImport.update({
+  id: '/busca/$slug',
+  path: '/busca/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemonstracaoIndexRoute = DemonstracaoIndexRouteImport.update({
+  id: '/demonstracao/',
+  path: '/demonstracao/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemonstracaoTipoRoute = DemonstracaoTipoRouteImport.update({
+  id: '/demonstracao/$tipo',
+  path: '/demonstracao/$tipo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpreendimentosIndexRoute = EmpreendimentosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EmpreendimentosRoute,
+} as any)
+const EmpreendimentosSlugRoute = EmpreendimentosSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EmpreendimentosRoute,
+} as any)
+const ImoveisIndexRoute = ImoveisIndexRouteImport.update({
+  id: '/imoveis/',
+  path: '/imoveis/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImoveisIdRoute = ImoveisIdRouteImport.update({
+  id: '/imoveis/$id',
+  path: '/imoveis/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anunciar': typeof AnunciarRoute
+  '/contato': typeof ContatoRoute
+  '/corretores': typeof CorretoresRoute
+  '/depoimento-enviado': typeof DepoimentoEnviadoRoute
+  '/empreendimentos': typeof EmpreendimentosRouteWithChildren
+  '/encomende-seu-imovel': typeof EncomendeSeuImovelRoute
+  '/enviar-depoimento': typeof EnviarDepoimentoRoute
+  '/favoritos': typeof FavoritosRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/trabalhe-conosco': typeof TrabalheConoscoRoute
+  '/vitrine': typeof VitrineRoute
+  '/vitrine.html': typeof VitrineDothtmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/busca/$slug': typeof BuscaSlugRoute
+  '/demonstracao/$tipo': typeof DemonstracaoTipoRoute
+  '/empreendimentos/$slug': typeof EmpreendimentosSlugRoute
+  '/imoveis/$id': typeof ImoveisIdRoute
+  '/blog/': typeof BlogIndexRoute
+  '/demonstracao/': typeof DemonstracaoIndexRoute
+  '/empreendimentos/': typeof EmpreendimentosIndexRoute
+  '/imoveis/': typeof ImoveisIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anunciar': typeof AnunciarRoute
+  '/contato': typeof ContatoRoute
+  '/corretores': typeof CorretoresRoute
+  '/depoimento-enviado': typeof DepoimentoEnviadoRoute
+  '/encomende-seu-imovel': typeof EncomendeSeuImovelRoute
+  '/enviar-depoimento': typeof EnviarDepoimentoRoute
+  '/favoritos': typeof FavoritosRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/trabalhe-conosco': typeof TrabalheConoscoRoute
+  '/vitrine': typeof VitrineRoute
+  '/vitrine.html': typeof VitrineDothtmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/busca/$slug': typeof BuscaSlugRoute
+  '/demonstracao/$tipo': typeof DemonstracaoTipoRoute
+  '/empreendimentos/$slug': typeof EmpreendimentosSlugRoute
+  '/imoveis/$id': typeof ImoveisIdRoute
+  '/blog': typeof BlogIndexRoute
+  '/demonstracao': typeof DemonstracaoIndexRoute
+  '/empreendimentos': typeof EmpreendimentosIndexRoute
+  '/imoveis': typeof ImoveisIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anunciar': typeof AnunciarRoute
+  '/contato': typeof ContatoRoute
+  '/corretores': typeof CorretoresRoute
+  '/depoimento-enviado': typeof DepoimentoEnviadoRoute
+  '/empreendimentos': typeof EmpreendimentosRouteWithChildren
+  '/encomende-seu-imovel': typeof EncomendeSeuImovelRoute
+  '/enviar-depoimento': typeof EnviarDepoimentoRoute
+  '/favoritos': typeof FavoritosRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/trabalhe-conosco': typeof TrabalheConoscoRoute
+  '/vitrine': typeof VitrineRoute
+  '/vitrine.html': typeof VitrineDothtmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/busca/$slug': typeof BuscaSlugRoute
+  '/demonstracao/$tipo': typeof DemonstracaoTipoRoute
+  '/empreendimentos/$slug': typeof EmpreendimentosSlugRoute
+  '/imoveis/$id': typeof ImoveisIdRoute
+  '/blog/': typeof BlogIndexRoute
+  '/demonstracao/': typeof DemonstracaoIndexRoute
+  '/empreendimentos/': typeof EmpreendimentosIndexRoute
+  '/imoveis/': typeof ImoveisIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/anunciar'
+    | '/contato'
+    | '/corretores'
+    | '/depoimento-enviado'
+    | '/empreendimentos'
+    | '/encomende-seu-imovel'
+    | '/enviar-depoimento'
+    | '/favoritos'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/trabalhe-conosco'
+    | '/vitrine'
+    | '/vitrine.html'
+    | '/blog/$slug'
+    | '/busca/$slug'
+    | '/demonstracao/$tipo'
+    | '/empreendimentos/$slug'
+    | '/imoveis/$id'
+    | '/blog/'
+    | '/demonstracao/'
+    | '/empreendimentos/'
+    | '/imoveis/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/anunciar'
+    | '/contato'
+    | '/corretores'
+    | '/depoimento-enviado'
+    | '/encomende-seu-imovel'
+    | '/enviar-depoimento'
+    | '/favoritos'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/trabalhe-conosco'
+    | '/vitrine'
+    | '/vitrine.html'
+    | '/blog/$slug'
+    | '/busca/$slug'
+    | '/demonstracao/$tipo'
+    | '/empreendimentos/$slug'
+    | '/imoveis/$id'
+    | '/blog'
+    | '/demonstracao'
+    | '/empreendimentos'
+    | '/imoveis'
+  id:
+    | '__root__'
+    | '/'
+    | '/anunciar'
+    | '/contato'
+    | '/corretores'
+    | '/depoimento-enviado'
+    | '/empreendimentos'
+    | '/encomende-seu-imovel'
+    | '/enviar-depoimento'
+    | '/favoritos'
+    | '/politica-de-privacidade'
+    | '/sobre'
+    | '/trabalhe-conosco'
+    | '/vitrine'
+    | '/vitrine.html'
+    | '/blog/$slug'
+    | '/busca/$slug'
+    | '/demonstracao/$tipo'
+    | '/empreendimentos/$slug'
+    | '/imoveis/$id'
+    | '/blog/'
+    | '/demonstracao/'
+    | '/empreendimentos/'
+    | '/imoveis/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnunciarRoute: typeof AnunciarRoute
+  ContatoRoute: typeof ContatoRoute
+  CorretoresRoute: typeof CorretoresRoute
+  DepoimentoEnviadoRoute: typeof DepoimentoEnviadoRoute
+  EmpreendimentosRoute: typeof EmpreendimentosRouteWithChildren
+  EncomendeSeuImovelRoute: typeof EncomendeSeuImovelRoute
+  EnviarDepoimentoRoute: typeof EnviarDepoimentoRoute
+  FavoritosRoute: typeof FavoritosRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  SobreRoute: typeof SobreRoute
+  TrabalheConoscoRoute: typeof TrabalheConoscoRoute
+  VitrineRoute: typeof VitrineRoute
+  VitrineDothtmlRoute: typeof VitrineDothtmlRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BuscaSlugRoute: typeof BuscaSlugRoute
+  DemonstracaoTipoRoute: typeof DemonstracaoTipoRoute
+  ImoveisIdRoute: typeof ImoveisIdRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  DemonstracaoIndexRoute: typeof DemonstracaoIndexRoute
+  ImoveisIndexRoute: typeof ImoveisIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +334,199 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/anunciar': {
+      id: '/anunciar'
+      path: '/anunciar'
+      fullPath: '/anunciar'
+      preLoaderRoute: typeof AnunciarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corretores': {
+      id: '/corretores'
+      path: '/corretores'
+      fullPath: '/corretores'
+      preLoaderRoute: typeof CorretoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/depoimento-enviado': {
+      id: '/depoimento-enviado'
+      path: '/depoimento-enviado'
+      fullPath: '/depoimento-enviado'
+      preLoaderRoute: typeof DepoimentoEnviadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empreendimentos': {
+      id: '/empreendimentos'
+      path: '/empreendimentos'
+      fullPath: '/empreendimentos'
+      preLoaderRoute: typeof EmpreendimentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/encomende-seu-imovel': {
+      id: '/encomende-seu-imovel'
+      path: '/encomende-seu-imovel'
+      fullPath: '/encomende-seu-imovel'
+      preLoaderRoute: typeof EncomendeSeuImovelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enviar-depoimento': {
+      id: '/enviar-depoimento'
+      path: '/enviar-depoimento'
+      fullPath: '/enviar-depoimento'
+      preLoaderRoute: typeof EnviarDepoimentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favoritos': {
+      id: '/favoritos'
+      path: '/favoritos'
+      fullPath: '/favoritos'
+      preLoaderRoute: typeof FavoritosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trabalhe-conosco': {
+      id: '/trabalhe-conosco'
+      path: '/trabalhe-conosco'
+      fullPath: '/trabalhe-conosco'
+      preLoaderRoute: typeof TrabalheConoscoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vitrine': {
+      id: '/vitrine'
+      path: '/vitrine'
+      fullPath: '/vitrine'
+      preLoaderRoute: typeof VitrineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vitrine.html': {
+      id: '/vitrine.html'
+      path: '/vitrine.html'
+      fullPath: '/vitrine.html'
+      preLoaderRoute: typeof VitrineDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/busca/$slug': {
+      id: '/busca/$slug'
+      path: '/busca/$slug'
+      fullPath: '/busca/$slug'
+      preLoaderRoute: typeof BuscaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demonstracao/': {
+      id: '/demonstracao/'
+      path: '/demonstracao'
+      fullPath: '/demonstracao/'
+      preLoaderRoute: typeof DemonstracaoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demonstracao/$tipo': {
+      id: '/demonstracao/$tipo'
+      path: '/demonstracao/$tipo'
+      fullPath: '/demonstracao/$tipo'
+      preLoaderRoute: typeof DemonstracaoTipoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empreendimentos/': {
+      id: '/empreendimentos/'
+      path: '/'
+      fullPath: '/empreendimentos/'
+      preLoaderRoute: typeof EmpreendimentosIndexRouteImport
+      parentRoute: typeof EmpreendimentosRoute
+    }
+    '/empreendimentos/$slug': {
+      id: '/empreendimentos/$slug'
+      path: '/$slug'
+      fullPath: '/empreendimentos/$slug'
+      preLoaderRoute: typeof EmpreendimentosSlugRouteImport
+      parentRoute: typeof EmpreendimentosRoute
+    }
+    '/imoveis/': {
+      id: '/imoveis/'
+      path: '/imoveis'
+      fullPath: '/imoveis/'
+      preLoaderRoute: typeof ImoveisIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/imoveis/$id': {
+      id: '/imoveis/$id'
+      path: '/imoveis/$id'
+      fullPath: '/imoveis/$id'
+      preLoaderRoute: typeof ImoveisIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface EmpreendimentosRouteChildren {
+  EmpreendimentosSlugRoute: typeof EmpreendimentosSlugRoute
+  EmpreendimentosIndexRoute: typeof EmpreendimentosIndexRoute
+}
+
+const EmpreendimentosRouteChildren: EmpreendimentosRouteChildren = {
+  EmpreendimentosSlugRoute: EmpreendimentosSlugRoute,
+  EmpreendimentosIndexRoute: EmpreendimentosIndexRoute,
+}
+
+const EmpreendimentosRouteWithChildren = EmpreendimentosRoute._addFileChildren(
+  EmpreendimentosRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnunciarRoute: AnunciarRoute,
+  ContatoRoute: ContatoRoute,
+  CorretoresRoute: CorretoresRoute,
+  DepoimentoEnviadoRoute: DepoimentoEnviadoRoute,
+  EmpreendimentosRoute: EmpreendimentosRouteWithChildren,
+  EncomendeSeuImovelRoute: EncomendeSeuImovelRoute,
+  EnviarDepoimentoRoute: EnviarDepoimentoRoute,
+  FavoritosRoute: FavoritosRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  SobreRoute: SobreRoute,
+  TrabalheConoscoRoute: TrabalheConoscoRoute,
+  VitrineRoute: VitrineRoute,
+  VitrineDothtmlRoute: VitrineDothtmlRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BuscaSlugRoute: BuscaSlugRoute,
+  DemonstracaoTipoRoute: DemonstracaoTipoRoute,
+  ImoveisIdRoute: ImoveisIdRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  DemonstracaoIndexRoute: DemonstracaoIndexRoute,
+  ImoveisIndexRoute: ImoveisIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

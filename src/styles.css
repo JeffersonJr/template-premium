@@ -4,28 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
-
 @theme inline {
+  --font-display: "Google Sans Flex", "Google Sans", Arial, sans-serif;
+  --font-sans: "Google Sans Flex", "Google Sans", Arial, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -45,76 +31,112 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-overlay: var(--overlay);
-  --color-glass: var(--glass);
-  --font-display: "Fraunces", serif;
-  --font-sans: "Manrope", sans-serif;
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-whatsapp: var(--whatsapp);
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.16 0.012 250);
-  --foreground: oklch(0.96 0.01 85);
-  --card: oklch(0.21 0.014 250);
-  --card-foreground: oklch(0.96 0.01 85);
-  --popover: oklch(0.21 0.014 250);
-  --popover-foreground: oklch(0.96 0.01 85);
-  --primary: oklch(0.8 0.12 78);
-  --primary-foreground: oklch(0.16 0.012 250);
-  --secondary: oklch(0.26 0.015 250);
-  --secondary-foreground: oklch(0.96 0.01 85);
-  --muted: oklch(0.25 0.014 250);
-  --muted-foreground: oklch(0.7 0.015 250);
-  --accent: oklch(0.3 0.02 250);
-  --accent-foreground: oklch(0.96 0.01 85);
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.8 0.12 78);
-  --chart-1: oklch(0.8 0.12 78);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.21 0.014 250);
-  --sidebar-foreground: oklch(0.96 0.01 85);
-  --sidebar-primary: oklch(0.8 0.12 78);
-  --sidebar-primary-foreground: oklch(0.16 0.012 250);
-  --sidebar-accent: oklch(0.3 0.02 250);
-  --sidebar-accent-foreground: oklch(0.96 0.01 85);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.8 0.12 78);
-  --overlay: oklch(0.12 0.012 250);
-  --glass: oklch(0.2 0.014 250 / 70%);
-  --shadow-gold: 0 20px 50px -20px color-mix(in oklab, var(--primary) 45%, transparent);
+  /* Valores padrão: o CRM pode sobrescrevê-los no :root sem alterar o layout. */
+  --crm-primary-color: #102a4c;
+  --crm-secondary-color: #334155;
+  --radius: 1rem;
+  --background: #ffffff;
+  --foreground: var(--crm-secondary-color);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--crm-secondary-color);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--crm-secondary-color);
+  --primary: var(--crm-primary-color);
+  --primary-foreground: oklch(0.99 0 0);
+  --navy: var(--crm-primary-color);
+  --navy-foreground: oklch(0.97 0.01 250);
+  --secondary: color-mix(in oklab, var(--crm-primary-color) 10%, white);
+  --secondary-foreground: var(--crm-secondary-color);
+  --muted: color-mix(in oklab, var(--crm-primary-color) 6%, white);
+  --muted-foreground: color-mix(in oklab, var(--crm-secondary-color) 82%, white);
+  --accent: color-mix(in oklab, var(--crm-primary-color) 15%, white);
+  --accent-foreground: var(--crm-secondary-color);
+  --destructive: var(--crm-secondary-color);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: color-mix(in oklab, var(--crm-secondary-color) 15%, white);
+  --input: color-mix(in oklab, var(--crm-secondary-color) 15%, white);
+  --ring: var(--crm-primary-color);
+  /* Contraste de pelo menos 4.5:1 com texto branco nos botões WhatsApp. */
+  --whatsapp: #148044;
+  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--crm-primary-color) 55%, transparent) 0%, color-mix(in oklab, var(--crm-primary-color) 85%, transparent) 100%);
+  --gradient-brand: linear-gradient(135deg, var(--crm-primary-color), var(--crm-primary-color));
+  --shadow-card: 0 10px 28px -20px color-mix(in oklab, var(--crm-primary-color) 38%, transparent);
+  --shadow-float: 0 24px 50px -26px color-mix(in oklab, var(--crm-primary-color) 55%, transparent);
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
+  * { border-color: var(--color-border); }
+  /* `hidden` cria um scroll container e quebra `position: sticky` em páginas com filtros laterais. */
+  body { overflow-x: clip; background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); font-size: 16px; text-rendering: optimizeLegibility; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; }
 }
 
-@utility shadow-gold {
-  box-shadow: var(--shadow-gold);
+@layer utilities {
+  /* Escala tipográfica responsiva compartilhada pelas páginas do site. */
+  h1:not(.type-hero):not(.type-property) { font-size: clamp(1.875rem, 3.5vw, 3rem) !important; }
+  h2 { font-size: clamp(1.5rem, 2.5vw, 2.125rem) !important; }
+  h3 { font-size: clamp(1.125rem, 1.8vw, 1.375rem) !important; }
+  h1.type-hero { font-size: clamp(2.125rem, 5vw, 3.5rem) !important; }
+  h1.type-property { font-size: 20px !important; }
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px !important; }
+
+  /* Seta própria e recuo uniforme para os seletores nativos em todo o site. */
+  select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 3.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23102a4c' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1rem 1rem;
+  }
+  select:not([multiple])::-ms-expand { display: none; }
+  select:not([multiple]):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  :focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; scroll-margin-block: 1rem; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    select:not([multiple]) {
+      padding-right: 3.25rem;
+      background-position: right 1.125rem center;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1.type-property { font-size: 28px !important; }
+  }
+
+  /* A cor secundária é exclusiva para textos e ícones tipográficos. */
+  .text-primary, .text-navy { color: var(--crm-secondary-color); }
+  .text-whatsapp { color: var(--whatsapp); }
+}
+
+@utility bg-hero-overlay { background-image: var(--gradient-hero); }
+@utility bg-brand-gradient { background-image: var(--gradient-brand); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-float { box-shadow: var(--shadow-float); }
+@utility container-x { width: 100%; max-width: 80rem; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
+@utility editorial-surface { background: linear-gradient(135deg, color-mix(in oklab, var(--secondary) 85%, white), var(--card)); }
+
+@keyframes showcase-image {
+  from { opacity: 0; transform: scale(1.015); }
+  to { opacity: 1; transform: scale(1); }
 }

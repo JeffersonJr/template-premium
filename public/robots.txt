@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://premium-house-imoveis-2026.microsistec.chatgpt.site/sitemap.xml
